@@ -1,0 +1,19 @@
+name: "Podcat Generator"
+author: "Arslan Khan"
+description: "Generate a feed for a podcast from a yaml file"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: "git-branch"
+  color: "red"
+inputs:
+  email:
+    description: "committer email"
+    required: true
+    default: ${{ github.actor }}@localhost
+  name:
+    description: "committer name"
+    required: true
+    default: ${{github.actor}}
